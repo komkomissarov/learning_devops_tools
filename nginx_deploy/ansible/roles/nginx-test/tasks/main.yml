@@ -1,0 +1,103 @@
+---
+
+- name: for Deb based
+  block:
+  - name: Install nginx
+    apt:
+      pkg: nginx
+    become: true 
+  
+  - name: Create dir for websites
+    file:
+      path: /var/www/{{ item }}
+      state: directory
+      group: www-data
+      mode: '775'
+    become: true 
+    with_items: "{{ siteslist }}"
+    
+  - name: Create site's config files
+    template:
+        src: "index.html"
+        dest: "/var/www/{{ item }}/index.html"
+        group: www-data
+        mode: '775'
+    with_items: "{{ siteslist }}"
+    become: true
+    notify: nginx_restart
+  
+  - name: Create nginx config files
+    template:
+        src: "website.j2"
+        dest: "/etc/nginx/sites-enabled/{{ item }}.conf"
+        group: www-data
+        mode: '775'
+    with_items: "{{ siteslist }}"
+    become: true
+    notify: nginx_restart
+  
+  when: ansible_os_family == "Debian" or ansible_os_family == "Ubuntu"
+
+- name: for RedHat OS
+  block:
+  - name: Install EPEL
+    yum:
+      pkg:  epel-release
+    become: true 
+  
+  - name: Install nginx
+    yum:
+      pkg: nginx
+    become: true 
+
+  - name: Create dir for websites
+    file:
+      path: /var/www/{{ item }}
+      state: directory
+      group: nginx
+      mode: '775'
+    become: true 
+    with_items: "{{ siteslist }}"
+  
+  - name: Ansible check directory.
+    stat:
+      path: /etc/nginx/sites-enabled/
+    register: my_folder
+
+  - name: "echo if directory already existed"
+    debug:
+      msg: "the sites-enabled directory is already existed"
+    when: my_folder.stat.exists
+
+  - name: "Ansible Create directory if not exists"
+    file:
+      path: /etc/nginx/sites-enabled/
+      state: directory
+      mode: 0775
+      group: nginx
+      owner: nginx
+    become: true
+    when: my_folder.stat.exists == false
+
+  - name: Create site's config files
+    template:
+        src: "index.html"
+        dest: "/var/www/{{ item }}/index.html"
+        group: nginx
+        mode: '775'
+    with_items: "{{ siteslist }}"
+    become: true
+    notify: nginx_restart
+
+  - name: Create nginx config files
+    template:
+        src: "website.j2"
+        dest: "/etc/nginx/sites-enabled/{{ item }}.conf"
+        group: nginx
+        mode: '775'
+    with_items: "{{ siteslist }}"
+    become: true
+    notify: nginx_restart
+
+  when: ansible_os_family == "CentOS" or ansible_os_family == "RedHat"
+

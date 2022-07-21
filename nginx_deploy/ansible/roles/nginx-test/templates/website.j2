@@ -4,7 +4,7 @@ server {
 
     access_log /var/log/nginx/{{ item }}_access.log;
 
-    error_log /var/log/nginx/{{ item }}_error.log;
+    error_log /var/log/nginx/{{ item }}__error.log;
 
     root /var/www/{{ item }};
 

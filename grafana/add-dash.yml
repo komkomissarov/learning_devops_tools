@@ -1,17 +1,17 @@
 - hosts: grafana
   tasks:
-    - name: Import Grafana dashboard
-      grafana_dashboard:
-        grafana_url: "{{ grafana_url }}"
-        grafana_api_key: "{{ grafana_api_key }}"
-        state: present
-        message: Updated by ansible
-        overwrite: yes
-        path: /root/dash.json
-    
+
+    - name: Create dashbord json file
+      template:
+          src: "dashboard-node.json"
+          dest: "/root/dashboard-node.json"
+          mode: '775'
+      vars:
+          title: "linux_node"
+  
     - name: Create influxdb datasource
       grafana_datasource:
-        name: "datasource-influxdb"
+        name: "{{ datasource_name }}"
         grafana_url: "{{ grafana_url }}"
         grafana_api_key: "{{ grafana_api_key }}"
         org_id: "1"
@@ -20,6 +20,16 @@
         database: "{{ influx_db_name }}"
         time_interval: ">10s"
         password: "{{ influx_db_pass }}"
+        is_default: yes
+
+    - name: Import Grafana dashboard
+      grafana_dashboard:
+        grafana_url: "{{ grafana_url }}"
+        grafana_api_key: "{{ grafana_api_key }}"
+        state: present
+        message: Updated by ansible
+        overwrite: yes
+        path: /root/dashboard-node.json
 
   become: true
 

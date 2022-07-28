@@ -20,15 +20,12 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 928,
   "graphTooltip": 1,
-  "id": 4,
+  
   "links": [],
   "liveNow": false,
   "panels": [
     {
-      "datasource": {
-        "type": "influxdb",
-        "uid": "I8ApG7kVk"
-      },
+      "datasource": "datasource-influxdb",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -104,7 +101,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "dsType": "influxdb",
           "groupBy": [
@@ -153,10 +150,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "influxdb",
-        "uid": "I8ApG7kVk"
-      },
+      "datasource": "datasource-influxdb",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -223,7 +217,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "dsType": "influxdb",
           "groupBy": [
@@ -271,10 +265,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "influxdb",
-        "uid": "I8ApG7kVk"
-      },
+      "datasource": "datasource-influxdb",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -341,7 +332,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "dsType": "influxdb",
           "groupBy": [
@@ -389,10 +380,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "influxdb",
-        "uid": "I8ApG7kVk"
-      },
+      "datasource": "datasource-influxdb",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -459,7 +447,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "dsType": "influxdb",
           "groupBy": [
@@ -507,10 +495,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "influxdb",
-        "uid": "I8ApG7kVk"
-      },
+      "datasource": "datasource-influxdb",
       "fieldConfig": {
         "defaults": {
           "mappings": [
@@ -572,7 +557,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "dsType": "influxdb",
           "groupBy": [
@@ -633,10 +618,7 @@
       "type": "gauge"
     },
     {
-      "datasource": {
-        "type": "influxdb",
-        "uid": "I8ApG7kVk"
-      },
+      "datasource": "datasource-influxdb",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -702,7 +684,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "dsType": "influxdb",
           "groupBy": [
@@ -750,10 +732,7 @@
       "type": "gauge"
     },
     {
-      "datasource": {
-        "type": "influxdb",
-        "uid": "I8ApG7kVk"
-      },
+      "datasource": "datasource-influxdb",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -820,7 +799,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "dsType": "influxdb",
           "groupBy": [
@@ -868,10 +847,7 @@
       "type": "gauge"
     },
     {
-      "datasource": {
-        "type": "influxdb",
-        "uid": "I8ApG7kVk"
-      },
+      "datasource": "datasource-influxdb",
       "fieldConfig": {
         "defaults": {
           "decimals": 0,
@@ -934,7 +910,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "dsType": "influxdb",
           "groupBy": [
@@ -989,10 +965,7 @@
       "type": "gauge"
     },
     {
-      "datasource": {
-        "type": "influxdb",
-        "uid": "I8ApG7kVk"
-      },
+      "datasource": "datasource-influxdb",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1060,7 +1033,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "dsType": "influxdb",
           "groupBy": [
@@ -1119,7 +1092,7 @@
       "collapsed": false,
       "datasource": {
         "type": "influxdb",
-        "uid": "yje5inz4k"
+        "uid": "${datasource}"
       },
       "gridPos": {
         "h": 1,
@@ -1133,7 +1106,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "yje5inz4k"
+            "uid": "${datasource}"
           },
           "refId": "A"
         }
@@ -1146,10 +1119,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": {
-        "type": "influxdb",
-        "uid": "I8ApG7kVk"
-      },
+      "datasource": "datasource-influxdb",
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -1207,7 +1177,7 @@
           "alias": "$tag_host: $col",
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "dsType": "influxdb",
           "function": "mean",
@@ -1293,10 +1263,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": {
-        "type": "influxdb",
-        "uid": "I8ApG7kVk"
-      },
+      "datasource": "datasource-influxdb",
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -1349,7 +1316,7 @@
           "alias": "$tag_host: $col",
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "dsType": "influxdb",
           "function": "mean",
@@ -1429,10 +1396,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": {
-        "type": "influxdb",
-        "uid": "I8ApG7kVk"
-      },
+      "datasource": "datasource-influxdb",
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -1490,7 +1454,7 @@
           "alias": "$tag_host: $tag_interface: $col",
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "dsType": "influxdb",
           "function": "derivative",
@@ -1544,7 +1508,7 @@
           "alias": "$tag_host: $tag_interface: $col",
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "dsType": "influxdb",
           "function": "derivative",
@@ -1631,10 +1595,7 @@
       "bars": true,
       "dashLength": 10,
       "dashes": false,
-      "datasource": {
-        "type": "influxdb",
-        "uid": "I8ApG7kVk"
-      },
+      "datasource": "datasource-influxdb",
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -1692,7 +1653,7 @@
           "alias": "$tag_host: $tag_interface: $col",
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "dsType": "influxdb",
           "function": "derivative",
@@ -1746,7 +1707,7 @@
           "alias": "$tag_host: $tag_interface: $col",
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "dsType": "influxdb",
           "function": "derivative",
@@ -1833,7 +1794,7 @@
       "collapsed": false,
       "datasource": {
         "type": "influxdb",
-        "uid": "yje5inz4k"
+        "uid": "${datasource}"
       },
       "gridPos": {
         "h": 1,
@@ -1847,7 +1808,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "yje5inz4k"
+            "uid": "${datasource}"
           },
           "refId": "A"
         }
@@ -1860,10 +1821,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": {
-        "type": "influxdb",
-        "uid": "I8ApG7kVk"
-      },
+      "datasource": "datasource-influxdb",
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -1925,7 +1883,7 @@
           "alias": "$tag_host: $col",
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "dsType": "influxdb",
           "function": "mean",
@@ -2006,10 +1964,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": {
-        "type": "influxdb",
-        "uid": "I8ApG7kVk"
-      },
+      "datasource": "datasource-influxdb",
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -2072,7 +2027,7 @@
           "alias": "$tag_host: mountpoint $tag_path - $col",
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "dsType": "influxdb",
           "function": "mean",
@@ -2159,7 +2114,7 @@
       "collapsed": true,
       "datasource": {
         "type": "influxdb",
-        "uid": "yje5inz4k"
+        "uid": "${datasource}"
       },
       "gridPos": {
         "h": 1,
@@ -2176,7 +2131,7 @@
           "dashes": false,
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "editable": true,
           "error": false,
@@ -2237,7 +2192,7 @@
               "alias": "$tag_host: $cpu $col",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "function": "mean",
@@ -2319,7 +2274,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "yje5inz4k"
+            "uid": "${datasource}"
           },
           "refId": "A"
         }
@@ -2331,7 +2286,7 @@
       "collapsed": true,
       "datasource": {
         "type": "influxdb",
-        "uid": "yje5inz4k"
+        "uid": "${datasource}"
       },
       "gridPos": {
         "h": 1,
@@ -2348,7 +2303,7 @@
           "dashes": false,
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "editable": true,
           "error": false,
@@ -2406,7 +2361,7 @@
               "alias": "$tag_host: $col",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "function": "derivative",
@@ -2494,7 +2449,7 @@
           "dashes": false,
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "editable": true,
           "error": false,
@@ -2557,7 +2512,7 @@
               "alias": "on close",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -2612,7 +2567,7 @@
               "alias": "on data",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -2667,7 +2622,7 @@
               "alias": "timeout",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -2722,7 +2677,7 @@
               "alias": "failed",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -2777,7 +2732,7 @@
               "alias": "linger",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -2832,7 +2787,7 @@
               "alias": "memory",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -2922,7 +2877,7 @@
           "dashes": false,
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "decimals": 0,
           "editable": true,
@@ -2986,7 +2941,7 @@
               "alias": "estabresets",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -3035,7 +2990,7 @@
               "alias": "outrsts",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -3084,7 +3039,7 @@
               "alias": "activeopens",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -3133,7 +3088,7 @@
               "alias": "passiveopens",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -3217,7 +3172,7 @@
           "dashes": false,
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "editable": true,
           "error": false,
@@ -3280,7 +3235,7 @@
               "alias": "failed",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -3333,7 +3288,7 @@
               "alias": "received",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -3386,7 +3341,7 @@
               "alias": "sent",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -3474,7 +3429,7 @@
           "dashes": false,
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "editable": true,
           "error": false,
@@ -3537,7 +3492,7 @@
               "alias": "in echos",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -3590,7 +3545,7 @@
               "alias": "out echos",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -3643,7 +3598,7 @@
               "alias": "in echo responses",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -3696,7 +3651,7 @@
               "alias": "out echo responses",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -3784,7 +3739,7 @@
           "dashes": false,
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "decimals": 1,
           "editable": true,
@@ -3848,7 +3803,7 @@
               "alias": "in errors",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -3901,7 +3856,7 @@
               "alias": "out errors",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -3954,7 +3909,7 @@
               "alias": "checksum errors",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -4042,7 +3997,7 @@
           "dashes": false,
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "editable": true,
           "error": false,
@@ -4105,7 +4060,7 @@
               "alias": "in discards",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -4158,7 +4113,7 @@
               "alias": "out discards",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -4211,7 +4166,7 @@
               "alias": "in hdr errors",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -4264,7 +4219,7 @@
               "alias": "in addr errors",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -4317,7 +4272,7 @@
               "alias": "out no routes",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -4370,7 +4325,7 @@
               "alias": "in unknown protocol",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -4458,7 +4413,7 @@
           "dashes": false,
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "editable": true,
           "error": false,
@@ -4521,7 +4476,7 @@
               "alias": "in discards",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -4574,7 +4529,7 @@
               "alias": "out discards",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -4627,7 +4582,7 @@
               "alias": "in hdr errors",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -4680,7 +4635,7 @@
               "alias": "in addr errors",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -4733,7 +4688,7 @@
               "alias": "out no routes",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -4786,7 +4741,7 @@
               "alias": "in unknown protocol",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "groupBy": [
@@ -4872,7 +4827,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "yje5inz4k"
+            "uid": "${datasource}"
           },
           "refId": "A"
         }
@@ -4884,7 +4839,7 @@
       "collapsed": true,
       "datasource": {
         "type": "influxdb",
-        "uid": "yje5inz4k"
+        "uid": "${datasource}"
       },
       "gridPos": {
         "h": 1,
@@ -4901,7 +4856,7 @@
           "dashes": false,
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "editable": true,
           "error": false,
@@ -4961,7 +4916,7 @@
               "alias": "$tag_host: $col",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "function": "mean",
@@ -5042,7 +4997,7 @@
           "dashes": false,
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "editable": true,
           "error": false,
@@ -5103,7 +5058,7 @@
               "alias": "$tag_host: $col",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "function": "mean",
@@ -5183,7 +5138,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "yje5inz4k"
+            "uid": "${datasource}"
           },
           "refId": "A"
         }
@@ -5195,7 +5150,7 @@
       "collapsed": false,
       "datasource": {
         "type": "influxdb",
-        "uid": "yje5inz4k"
+        "uid": "${datasource}"
       },
       "gridPos": {
         "h": 1,
@@ -5210,7 +5165,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "yje5inz4k"
+            "uid": "${datasource}"
           },
           "refId": "A"
         }
@@ -5223,10 +5178,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": {
-        "type": "influxdb",
-        "uid": "I8ApG7kVk"
-      },
+      "datasource": "datasource-influxdb",
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -5288,7 +5240,7 @@
           "alias": "$tag_host: $tag_name: $col",
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "dsType": "influxdb",
           "function": "mean",
@@ -5341,7 +5293,7 @@
           "alias": "$tag_host: $tag_name: $col",
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "dsType": "influxdb",
           "function": "mean",
@@ -5427,10 +5379,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": {
-        "type": "influxdb",
-        "uid": "I8ApG7kVk"
-      },
+      "datasource": "datasource-influxdb",
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -5492,7 +5441,7 @@
           "alias": "$tag_host: $tag_name: $col",
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "dsType": "influxdb",
           "function": "mean",
@@ -5545,7 +5494,7 @@
           "alias": "$tag_host: $tag_name: $col",
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "dsType": "influxdb",
           "function": "mean",
@@ -5631,10 +5580,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": {
-        "type": "influxdb",
-        "uid": "I8ApG7kVk"
-      },
+      "datasource": "datasource-influxdb",
       "editable": true,
       "error": false,
       "fieldConfig": {
@@ -5696,7 +5642,7 @@
           "alias": "$tag_host: $tag_name: $col",
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "dsType": "influxdb",
           "function": "mean",
@@ -5749,7 +5695,7 @@
           "alias": "$tag_host: $tag_name: $col",
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "dsType": "influxdb",
           "function": "mean",
@@ -5834,7 +5780,7 @@
       "collapsed": true,
       "datasource": {
         "type": "influxdb",
-        "uid": "yje5inz4k"
+        "uid": "${datasource}"
       },
       "gridPos": {
         "h": 1,
@@ -5851,7 +5797,7 @@
           "dashes": false,
           "datasource": {
             "type": "influxdb",
-            "uid": "I8ApG7kVk"
+            "uid": "${datasource}"
           },
           "editable": true,
           "error": false,
@@ -5921,7 +5867,7 @@
               "alias": "$tag_host: mountpoint $tag_path - $col",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "function": "mean",
@@ -5974,7 +5920,7 @@
               "alias": "$tag_host: mountpoint $tag_path - $col",
               "datasource": {
                 "type": "influxdb",
-                "uid": "I8ApG7kVk"
+                "uid": "${datasource}"
               },
               "dsType": "influxdb",
               "function": "mean",
@@ -6062,7 +6008,7 @@
         {
           "datasource": {
             "type": "influxdb",
-            "uid": "yje5inz4k"
+            "uid": "${datasource}"
           },
           "refId": "A"
         }
@@ -6081,8 +6027,8 @@
         "allFormat": "glob",
         "current": {
           "selected": false,
-          "text": "datasource-influxdb",
-          "value": "datasource-influxdb"
+          "text": "{{ datasource_name }}",
+          "value": "{{ datasource_name }}"
         },
         "datasource": "InfluxDB telegraf",
         "hide": 0,
@@ -6172,7 +6118,7 @@
         },
         "datasource": {
           "type": "influxdb",
-          "uid": "I8ApG7kVk"
+          "uid": "${datasource}"
         },
         "definition": "",
         "hide": 0,
@@ -6201,7 +6147,7 @@
         },
         "datasource": {
           "type": "influxdb",
-          "uid": "$datasource"
+          "uid": "${datasource}"
         },
         "definition": "",
         "hide": 0,
@@ -6230,7 +6176,7 @@
         },
         "datasource": {
           "type": "influxdb",
-          "uid": "$datasource"
+          "uid": "${datasource}"
         },
         "definition": "",
         "hide": 0,
@@ -6259,7 +6205,7 @@
         },
         "datasource": {
           "type": "influxdb",
-          "uid": "$datasource"
+          "uid": "${datasource}"
         },
         "definition": "",
         "hide": 0,
@@ -6288,7 +6234,7 @@
         },
         "datasource": {
           "type": "influxdb",
-          "uid": "$datasource"
+          "uid": "${datasource}"
         },
         "definition": "",
         "hide": 0,
@@ -6337,8 +6283,7 @@
     ]
   },
   "timezone": "browser",
-  "title": "Pvesw-Vosk",
-  "uid": "asdd",
+  "title": "{{ title }}",
   "version": 1,
   "weekStart": ""
 }

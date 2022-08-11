@@ -1,0 +1,60 @@
+version: "3.8"
+
+networks:
+  loki:
+
+volumes:
+  grafana-db:
+  grafana-conf:
+  influxdb:
+
+services:
+  
+  influxdb:
+    container_name: influxdb
+    ports:
+      - "8086:8086"
+    image: influxdb:1.8.10
+    volumes:
+      - influxdb:/var/lib/influxdb
+    restart: always
+    networks:
+      - loki
+
+  loki:
+    container_name: loki
+    image: grafana/loki:2.6.0
+    ports:
+      - "3100:3100"
+    volumes:
+      - /etc/loki/:/mnt/config
+    command: -config.file=/mnt/config/loki-config.yaml
+    restart: always
+    networks:
+      - loki
+
+  promtail:
+    image: grafana/promtail:2.6.0
+    volumes:
+      - /var/log:/var/log
+      - /etc/promtail/:/mnt/config/
+    command: -config.file=/mnt/config/promtail-config.yaml
+    restart: always
+    networks:
+      - loki
+
+  grafana:
+    volumes:
+      - grafana-db:/var/lib/grafana
+      - grafana-conf:/etc/grafana
+    container_name: grafana
+    build: grafana/
+    image: grafana-custom-alpine
+    restart: always
+    ports:
+      - "3000:3000"
+    networks:
+      - loki
+
+
+
